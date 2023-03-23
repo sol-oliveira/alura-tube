@@ -2,6 +2,23 @@ import { createGlobalStyle } from "styled-components";
 
 export const CSSReset = createGlobalStyle`
   /* Reset */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color:rgb(229 229 229);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(156 163 175 );
+  }
   * {
     margin: 0;
     padding: 0;
