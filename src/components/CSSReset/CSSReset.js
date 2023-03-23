@@ -34,5 +34,5 @@ export const CSSReset = createGlobalStyle`
     &:focus {
       opacity: .5;
     }
-  }
+  }  
 `;
