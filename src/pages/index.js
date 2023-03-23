@@ -7,12 +7,21 @@ import Timeline from "../components/TimeLine/Timeline";
 import Banner from "../components/Banner/Banner";
 
 import config from "../../config.json";
+import Head from "next/head";
 
 function HomePage() {
     const [valorDoFiltro, setValorDoFiltro] = React.useState("");
 
     return (
-        <>
+        <>  
+            <Head>
+                <link
+                rel="icon"
+                type="image/x-icon"
+                href="https://icons.iconarchive.com/icons/dakirby309/simply-styled/128/YouTube-icon.png"
+                />
+                <title>AluraTube</title>
+            </Head>
             <CSSReset />
             <div style={{
                 display: "flex",
