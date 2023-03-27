@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import  { StyledFavorites }  from './StyledFavorites';
 
-export default function Favorites()  {
+export default function Favorites(props)  {
 
   const [following, setFollowing] = React.useState([]);  
 
@@ -27,13 +27,17 @@ export default function Favorites()  {
     <section>
       <h2>Aluratubes Favoritos</h2>
       <div>
-        {following.map((item, index) => {
-          return (
-            <a href={item.html_url} target="_blank">
-              <img src={item.avatar_url} />
-              <span>{`@${item.login}`}</span>
-            </a>
-          );
+        {following.filter((item) => {
+          return item.html_url
+          .toLowerCase()
+          .includes(props.searchValue.toLowerCase());
+          }).map((item, index) => {
+            return (
+              <a href={item.html_url} target="_blank" key={index}>
+                <img src={item.avatar_url} />
+                <span>{`@${item.login}`}</span>
+              </a>
+            );
         })}
       </div>
     </section>

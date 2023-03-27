@@ -33,7 +33,7 @@ function HomePage() {
                 <Banner/>
                 <User />
                 <Timeline searchValue={valorDoFiltro} playlists={config.playlists}/> 
-                <Favorites />                 
+                <Favorites searchValue={valorDoFiltro} />                 
                 
             </div>
         </>

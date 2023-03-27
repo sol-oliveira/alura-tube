@@ -3,19 +3,19 @@ import styled from "styled-components";
 export const StyledSearch = styled.div`
   display: flex;
   flex-direction: row;
-  border: 1px solid ${({ theme }) => theme.borderBase};
-  max-width: 425px;
+  border: 1px solid gray;
+  max-width: 300px; 
   width: 100%;
-  border-radius: 2px;
   overflow: hidden;
-  
+  border-radius: 8px;  
+
   input {
     width: 80%;
     padding: 4px 6px;
     border: none;
     outline: none;
     color: ${({ theme }) => theme.textColorBase};
-    background-color: ${({ theme }) => theme.backgroundBase};
+    background-color: white;   
   }
   button {
     flex: 1;
