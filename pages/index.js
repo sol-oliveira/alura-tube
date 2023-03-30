@@ -1,14 +1,14 @@
 import React from "react";
 import Head from "next/head";
-import { CSSReset } from "../components/CSSReset/CSSReset";
 
-import Header from "../components/Header/Header";
-import User from "../components/User/User";
-import Timeline from "../components/TimeLine/Timeline";
-import Banner from "../components/Banner/Banner";
-import Favorites  from "../components/Favorites/Favorites";
+import Header from "../src/components/Header/Header";
+import Banner from "../src/components/Banner/Banner";
+import User from "../src/components/User/User";
+import Timeline from "../src/components/TimeLine/Timeline";
+import Favorites from "../src/components/Favorites/Favorites";
 
-import config from "../../config.json";
+import config from "../config.json";
+import { CSSReset } from "../assets/styles/CSSReset";
 
 function HomePage() {
     const [valorDoFiltro, setValorDoFiltro] = React.useState("");
@@ -29,8 +29,9 @@ function HomePage() {
                 flexDirection: "column",
                 flex: 1,                
             }}>
+                
                 <Header valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
-                <Banner/>
+                <Banner />
                 <User />
                 <Timeline searchValue={valorDoFiltro} playlists={config.playlists}/> 
                 <Favorites searchValue={valorDoFiltro} />                 
